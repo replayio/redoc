@@ -1,9 +1,11 @@
 name: E2E Tests
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 * * * *'
   push:
   workflow_dispatch:
+# env:
+#   DAY_OF_WEEK: Monday
 
 jobs:
   record:
