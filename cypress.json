@@ -2,6 +2,7 @@
   "ignoreTestFiles": "*.js.map",
   "integrationFolder": "e2e/integration",
   "pluginsFile": "e2e/plugins/index.js",
+  "supportFile": "e2e/support/index.js",
   "fixturesFolder": false,
   "fileServerFolder": ".",
   "video": false,
