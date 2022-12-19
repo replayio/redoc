@@ -1,4 +1,5 @@
 import { defineConfig } from 'cypress';
+import { writeFileSync } from 'fs';
 const cypressTypeScriptPreprocessor = require('./e2e/plugins/cy-ts-preprocessor');
 const cypressReplay = require('@replayio/cypress');
 
@@ -15,6 +16,13 @@ export default defineConfig({
     setupNodeEvents(on, config) {
       on('file:preprocessor', cypressTypeScriptPreprocessor);
       cypressReplay.default(on, config);
+
+      on('after:run', (afterRun: any) => {
+        const data = JSON.stringify(afterRun.totalDuration);
+        const filename = 'duration.json';
+        writeFileSync(filename, data);
+        console.log('cypress-json-results: wrote results to %s', filename);
+      });
 
       return config;
     },
