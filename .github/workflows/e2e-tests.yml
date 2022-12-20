@@ -25,6 +25,7 @@ jobs:
           RECORD_REPLAY_DISABLE_ASSERTS: 1
           # delete this once it's enabled by default
           REPLAY_DISABLE_SOURCEMAP_COLLECTION: 1
+          CYPRESS_NO_COMMAND_LOG: 1
       - name: Parse test run duration
         id: set_var
         if: always()
