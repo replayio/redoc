@@ -36,7 +36,7 @@ jobs:
         run: echo "time=`date +%s`" >> $GITHUB_OUTPUT
       - name: Upload replays
         if: ${{ always() }}
-        uses: replayio/action-upload@v0.4.3
+        uses: replayio/action-upload@v0.4.7
         with:
           api-key: rwk_CMx7Nd43nfKU5j6pDboS16IHDykYDIfIBMoejo6GofG
           public: true
