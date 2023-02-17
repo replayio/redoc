@@ -37,7 +37,7 @@
     "test:update-snapshot": "jest --updateSnapshot",
     "e2e": "cypress run",
     "e2e-ci": "cypress run --record",
-    "e2e-replay": "RECORD_ALL_CONTENT=1 RECORD_REPLAY_METADATA_FILE=$(mktemp) npx cypress run --browser \"Replay Chromium\"",
+    "e2e-replay": "RECORD_ALL_CONTENT=1 RECORD_REPLAY_METADATA_FILE=$(mktemp) npx cypress run --browser replay-chromium",
     "bundlesize": "size-limit",
     "ts-check": "tsc --noEmit --skipLibCheck",
     "cy:open": "cypress open",
@@ -65,7 +65,7 @@
   "devDependencies": {
     "@cypress/webpack-preprocessor": "^5.12.0",
     "@hot-loader/react-dom": "^17.0.2",
-    "@replayio/cypress": "^0.4.12",
+    "@replayio/cypress": "^0.5.4",
     "@size-limit/preset-app": "^7.0.4",
     "@types/chai": "^4.2.18",
     "@types/dompurify": "^2.2.2",
