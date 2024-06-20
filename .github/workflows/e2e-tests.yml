@@ -24,6 +24,8 @@ jobs:
           # These two are here to help with measuring the true overhead by disabling diagnostics
           RECORD_REPLAY_DISABLE_ASSERTS: 1
           RECORD_REPLAY_DISABLE_SOURCEMAP_COLLECTION: 1
+          # Add this here because Cypress <v10.9
+          CYPRESS_NO_COMMAND_LOG: 1
       - name: Parse test run duration
         id: set_var
         if: always()
